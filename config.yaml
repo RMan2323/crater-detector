@@ -1,0 +1,6 @@
+path: E:\SOI_SC\Data
+train: images\train
+val: images\val
+
+names:
+  0: crater
