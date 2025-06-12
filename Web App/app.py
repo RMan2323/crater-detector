@@ -19,13 +19,14 @@ def index():
             filename = file.filename
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
-            output_image, metadata_file = run_detection(filepath, app.config['OUTPUT_FOLDER'])
+            output_image, metadata_file, heatmap_file = run_detection(filepath, app.config['OUTPUT_FOLDER'])
 
             return render_template(
                 'index.html',
                 input_image=filename,
                 output_image=os.path.basename(output_image),
-                metadata_file=os.path.basename(metadata_file)
+                metadata_file=os.path.basename(metadata_file),
+                heatmap_file=os.path.basename(heatmap_file)
             )
     return render_template('index.html')
 

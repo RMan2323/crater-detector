@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+from heatmap import generate_heatmap
 import cv2
 import os
 
@@ -25,5 +26,8 @@ def run_detection(image_path, output_dir):
     with open(metadata_path, 'w') as f:
         for x1, y1, x2, y2 in crater_data:
             f.write(f'{x1},{y1},{x2},{y2}\n')
+        
+    heatmap_path = os.path.join(output_dir, base_name + '_heatmap.jpg')
+    generate_heatmap(crater_data, img.shape, heatmap_path)
 
-    return output_image_path, metadata_path
+    return output_image_path, metadata_path, heatmap_path
