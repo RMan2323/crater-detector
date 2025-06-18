@@ -1,14 +1,33 @@
-# crater-detector
+# crater-detector using YOLOv8n
+Requires the ultralytics package
 
-| Metric | train6 | train7 | train8 | train9 | train10 | train11 | train12 | train13 | train14 | train15 | train16 | train17 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **epochs**    | 1            | 2            | 3-4          | 5            | 6-8     | 9-13 | 14-15 | 16-20 | 21-22 | 23-28 | 29-34 | 35 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **TP**        | 174,383      | 203,571      | 196,813      | 206,784      | 206,926 | 209,578 | 207,188 | 211,881 | 209,416 | 207,069 | 209,769 | 189,106 |
-| **FP**        | 238,740      | 358,554      | 201,729      | 298,121      | 147,511 | 159,568 | 123,842 | 137,680 | 120,987 | 94,657 | 100,125 | 61,736 |
-| **FN**        | 75,305       | 46,117       | 52,875       | 42,904       | 42,759  | 40,110  | 42,500 | 37,807 | 40,272 | 42,619 | 39,919 | 60,582 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Accuracy**  | 0.3704       | 0.3228       | 0.3966       | 0.3567       | 0.5211 | 0.5119 | 0.5547 | 0.5472 | 0.5648 | 0.6014 | 0.5998 | 0.6071 |
-| **Precision** | 0.4224       | 0.3626       | 0.4940       | 0.4096       | 0.5838 | 0.5679 | 0.6258 | 0.6064 | 0.6339 | 0.6864 | 0.6769 | 0.7535 |
-| **Recall**    | 0.6983       | 0.8152       | 0.7882       | 0.8281       | 0.8287 | 0.8391 | 0.8296 | 0.8485 | 0.8384 | 0.8292 | 0.8400 | 0.7573 |
-| **F1 Score**  | 0.5241       | 0.5004       | 0.6095       | 0.5482       | 0.6850 | 0.6772 | 0.7129 | 0.7066 | 0.7216 | 0.7512 | 0.7495 | 0.7549 |
+## Using the Model
+See the YOLO documentation [here](https://docs.ultralytics.com/modes/predict/).
+
+## Using the Web App
+This web application allows you to detect lunar craters using a trained YOLOv8 model. It supports both image uploads and live detection through a webcam.
+
+Requirements:
+* Python 3.7 or higher
+* Pip (Python package manager)
+
+To set up for the first time:
+
+1. Go to the "Web App" directory
+2. Open the Terminal or CLI
+3. Run the command "pip install -r requirements.txt"
+
+To run the app:
+1. Go to the "Web App" directory
+2. Open the Terminal or CLI
+3. Run the command "python3 app.py"
+4. On your browser, go to http://127.0.0.1:5000 to use the app
+
+To close the app:
+1. Close the browser tab
+2. On the CLI, hit Ctrl + C to end the session
+
+You can now safely close the terminal
+
+Note:
+The uploaded images and the output files will be saved to "Web App/uploads" and "Web App/static/outputs" and you can safely delete the content inside these folders.
