@@ -5,7 +5,7 @@ import os
 model = YOLO('best.pt')
 
 def run_detection(image_path, output_dir):
-    results = model(image_path)
+    results = model(image_path, conf=0.23)
     result = results[0]
 
     img = cv2.imread(image_path)
