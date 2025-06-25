@@ -4,6 +4,9 @@ Requires the ultralytics package
 ## Using the Model
 See the YOLO documentation [here](https://docs.ultralytics.com/modes/predict/).
 
+## Performance
+![Performance](https://github.com/user-attachments/assets/8cb5c91b-c637-4dca-9e45-7fdc904b1286)
+
 ## Using the Web App
 This web application allows you to detect lunar craters using a trained YOLOv8 model. It supports both image uploads and live detection through a webcam.
 
